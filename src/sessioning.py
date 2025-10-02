@@ -12,7 +12,8 @@ def group_sessions(entries: List[ReflogEntry], idle_seconds: int = 45 * 60) -> L
     result: List[Tuple[str, ReflogEntry]] = []
     last_ts = entries[0].timestamp
     for e in entries:
-        if e.timestamp < last_ts - idle_seconds:
+        # Insert a break when forward gap between consecutive entries exceeds idle_seconds
+        if e.timestamp - last_ts > idle_seconds:
             result.append(("break", e))
         result.append(("entry", e))
         last_ts = e.timestamp

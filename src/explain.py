@@ -3,7 +3,6 @@ from __future__ import annotations
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
-from rich.text import Text
 
 from enrich import Enricher
 from cache import LRUCache
@@ -41,15 +40,6 @@ def explain_commit(services, sha: str):
         "lines": {"added": stats.lines_added, "deleted": stats.lines_deleted},
     }
 
-from __future__ import annotations
-
-from rich.console import Console
-
-
-def explain_commit(services, sha: str):
-    # Placeholder: just print commit sha; real implementation will enrich and render
-    console = Console()
-    console.print(f"Explain commit {sha}")
-    return {"sha": sha, "status": "not-implemented"}
+ 
 
 

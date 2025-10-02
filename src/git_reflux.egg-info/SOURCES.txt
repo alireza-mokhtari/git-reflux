@@ -1,3 +1,4 @@
+README.md
 pyproject.toml
 src/cache.py
 src/cli.py
@@ -20,5 +21,11 @@ src/git_reflux.egg-info/dependency_links.txt
 src/git_reflux.egg-info/entry_points.txt
 src/git_reflux.egg-info/requires.txt
 src/git_reflux.egg-info/top_level.txt
+tests/test_cli_flags.py
+tests/test_cli_outputs.py
+tests/test_enricher_stats.py
+tests/test_filters_and_session.py
 tests/test_heuristics.py
+tests/test_heuristics_more.py
+tests/test_origin_infer.py
 tests/test_parse.py

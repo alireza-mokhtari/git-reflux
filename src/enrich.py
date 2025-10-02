@@ -28,8 +28,7 @@ class Enricher:
         author_name, author_email, _, committer_name, committer_email, decorations, subject = (
             parts + [""] * (7 - len(parts))
         )[:7]
-        # Action type best effort from subject for now
-        action = ActionType.commit
+        action = ActionType.merge if len(parents) >= 2 else ActionType.commit
         return CommitInfo(
             sha=sha,
             parents=parents,
