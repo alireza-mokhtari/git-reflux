@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-reflux"
+version = "0.1.0"
+description = "Human-friendly reflog: where a change came from, when, how big, who, and the hash."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Alireza", email = "mr.armg@gmail.com" }]
+keywords = ["git", "reflog", "cli", "developer-tools"]
+dependencies = [
+  "typer>=0.12.3",
+  "rich>=13.7.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "mypy>=1.10",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+git-reflux = "cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+  "cli",
+  "version",
+  "interfaces",
+  "settings",
+  "logger",
+  "models",
+  "git_io",
+  "parse",
+  "providers",
+  "render",
+  "filters",
+  "explain",
+  "sessioning",
+  "cache",
+  "heuristics",
+]
+
+

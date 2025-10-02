@@ -1,0 +1,10 @@
+{
+  "version": "0.1.0",
+  "description": "Human-friendly reflog CLI",
+  "homepage": "https://github.com/alireza/git-reflux",
+  "license": "MIT",
+  "url": "https://github.com/alireza/git-reflux/releases/download/v0.1.0/git-reflux-0.1.0-windows.exe",
+  "hash": "REPLACE_ME",
+  "bin": ["git-reflux.exe"]
+}
+

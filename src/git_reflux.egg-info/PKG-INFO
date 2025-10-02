@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: git-reflux
+Version: 0.1.0
+Summary: Human-friendly reflog: where a change came from, when, how big, who, and the hash.
+Author-email: Alireza <mr.armg@gmail.com>
+License: MIT
+Keywords: git,reflog,cli,developer-tools
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.12.3
+Requires-Dist: rich>=13.7.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
+Requires-Dist: ruff>=0.6.0; extra == "dev"

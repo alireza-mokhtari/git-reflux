@@ -1,0 +1,18 @@
+name: git-reflux
+arch: all
+platform: linux
+version: 0.1.0
+section: default
+priority: extra
+maintainer: Alireza <mr.armg@gmail.com>
+description: Human-friendly reflog CLI
+homepage: https://github.com/alireza/git-reflux
+license: MIT
+depends:
+  - git
+contents:
+  - src: ./src
+    dst: /usr/local/lib/git-reflux
+  - src: ./src/cli.py
+    dst: /usr/local/bin/git-reflux
+    type: symlink
