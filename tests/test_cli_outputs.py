@@ -71,7 +71,6 @@ def test_render_json_includes_action_and_stats(monkeypatch):
 
         return Services(git=fake, parsers=Parsers(), heuristics=Heuristics())
 
-    from providers import build_services as real_build
     monkeypatch.setattr("providers.build_services", _build_services)
 
     services = build_services(cfg)
